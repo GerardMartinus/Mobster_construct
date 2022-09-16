@@ -1,0 +1,43 @@
+{
+	"name": "BulletEnemies",
+	"plugin-id": "Sprite",
+	"sid": 615645759392486,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 412150949090623
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 65,
+						"height": 65,
+						"originX": 1.3846153846153846,
+						"originY": 0.8615384615384616,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1079001,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 591975780789381,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

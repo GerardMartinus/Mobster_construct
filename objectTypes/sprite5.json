@@ -1,0 +1,89 @@
+{
+	"name": "Sprite5",
+	"plugin-id": "Sprite",
+	"sid": 373242061369763,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1763442,
+						"collisionPoly": {
+							"points": [
+								0.03125,
+								0.03125,
+								0.5,
+								0.03125,
+								0.9375,
+								0.03125,
+								0.9375,
+								0.5,
+								0.90625,
+								0.90625,
+								0.5,
+								0.9375,
+								0.0625,
+								0.90625,
+								0.03125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4189067,
+						"collisionPoly": {
+							"points": [
+								0.03125,
+								0.03125,
+								0.5,
+								0,
+								0.9375,
+								0.03125,
+								0.96875,
+								0.5,
+								0.90625,
+								0.90625,
+								0.5,
+								0.96875,
+								0.0625,
+								0.90625,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 696305525074926,
+				"name": "acender",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 4,
+				"repeatTo": 1,
+				"speed": 1
+			}
+		],
+		"subfolders": []
+	}
+}

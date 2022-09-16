@@ -1,0 +1,284 @@
+{
+	"name": "Capanga",
+	"plugin-id": "Sprite",
+	"sid": 183867900736837,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "qtdeMunicao",
+			"type": "number",
+			"desc": "Número de balas restantes",
+			"sid": 447663718981631
+		},
+		{
+			"name": "isAtirando",
+			"type": "boolean",
+			"desc": "Ele tem munição?",
+			"sid": 836600795383706
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 313419608325143
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "CampoDeVisão",
+			"sid": 738071468822956
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 591759,
+						"collisionPoly": {
+							"points": [
+								0.46530612244897873,
+								0.01814058956916087,
+								0.7938775510204084,
+								0.1224489795918361,
+								0.963265306122449,
+								0.4160997732426295,
+								0.9612244897959183,
+								0.6031746031746017,
+								0.7423469387755108,
+								0.8752834467120183,
+								0.5112244897959196,
+								0.9841269841269841,
+								0.14897959183673626,
+								0.8775510204081611,
+								0.0020408163265306367,
+								0.48752834467120043,
+								0.13877551020408263,
+								0.12471655328798181
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Ponto de Imagem 1",
+								"x": 1.28125,
+								"y": 0.71875
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 548639501180869,
+				"name": "Idle",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8568824,
+						"collisionPoly": {
+							"points": [
+								0.46530612244897873,
+								0.01814058956916087,
+								0.7938775510204084,
+								0.1224489795918361,
+								0.963265306122449,
+								0.4160997732426295,
+								0.9612244897959183,
+								0.6031746031746017,
+								0.7423469387755108,
+								0.8752834467120183,
+								0.5112244897959196,
+								0.9841269841269841,
+								0.14897959183673626,
+								0.8775510204081611,
+								0.0020408163265306367,
+								0.48752834467120043,
+								0.13877551020408263,
+								0.12471655328798181
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 605905916414863,
+				"name": "walk",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8713073,
+						"collisionPoly": {
+							"points": [
+								0.46530612244897873,
+								0.01814058956916087,
+								0.7938775510204084,
+								0.1224489795918361,
+								0.963265306122449,
+								0.4160997732426295,
+								0.9612244897959183,
+								0.6031746031746017,
+								0.7423469387755108,
+								0.8752834467120183,
+								0.5112244897959196,
+								0.9841269841269841,
+								0.14897959183673626,
+								0.8775510204081611,
+								0.0020408163265306367,
+								0.48752834467120043,
+								0.13877551020408263,
+								0.12471655328798181
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Ponto de Imagem 1",
+								"x": 1.28125,
+								"y": 0.71875
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 527031220876973,
+				"name": "saque de pistola",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1490048,
+						"collisionPoly": {
+							"points": [
+								0.46530612244897873,
+								0.01814058956916087,
+								0.7938775510204084,
+								0.1224489795918361,
+								0.963265306122449,
+								0.4160997732426295,
+								0.9612244897959183,
+								0.6031746031746017,
+								0.7423469387755108,
+								0.8752834467120183,
+								0.5112244897959196,
+								0.9841269841269841,
+								0.14897959183673626,
+								0.8775510204081611,
+								0.0020408163265306367,
+								0.48752834467120043,
+								0.13877551020408263,
+								0.12471655328798181
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 100024041410718,
+				"name": "segurando metralhadora",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4841259,
+						"collisionPoly": {
+							"points": [
+								0.46530612244897873,
+								0.01814058956916087,
+								0.7938775510204084,
+								0.1224489795918361,
+								0.963265306122449,
+								0.4160997732426295,
+								0.9612244897959183,
+								0.6031746031746017,
+								0.7423469387755108,
+								0.8752834467120183,
+								0.5112244897959196,
+								0.9841269841269841,
+								0.14897959183673626,
+								0.8775510204081611,
+								0.0020408163265306367,
+								0.48752834467120043,
+								0.13877551020408263,
+								0.12471655328798181
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Ponto de Imagem 1",
+								"x": 1.28125,
+								"y": 0.71875
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 358109022689119,
+				"name": "atirando_metra",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
