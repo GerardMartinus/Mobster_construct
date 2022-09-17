@@ -8,16 +8,16 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "TiledBg",
-			"name": "Plano de Fundo em Blocos",
+			"id": "Sprite",
+			"name": "Sprite",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
+			"id": "TiledBg",
+			"name": "Plano de Fundo em Blocos",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
@@ -56,16 +56,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "solid",
-			"name": "Sólido",
+			"id": "LOS",
+			"name": "Campo de visão",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "LOS",
-			"name": "Campo de visão",
+			"id": "solid",
+			"name": "Sólido",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
@@ -83,32 +83,14 @@
 			"Boss",
 			"BossCollision",
 			"BulletEnemies",
-			"Carro",
 			"PlanoDeFundoEmBlocos",
 			"Sprite2",
 			"Sprite3",
-			"Sprite4",
-			"Sprite5"
+			"Carro",
+			"Sprite5",
+			"Teclado"
 		],
-		"subfolders": [
-			{
-				"items": [
-					"PlanoDeFundoEmBlocos2",
-					"Player2",
-					"Teclado",
-					"PlayerCollision2",
-					"Bullet2",
-					"Boss2",
-					"Capanga2",
-					"BossCollision2",
-					"CapangaCollision2",
-					"BulletEnemies2",
-					"Carro2"
-				],
-				"subfolders": [],
-				"name": "Tipos de objeto"
-			}
-		]
+		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],

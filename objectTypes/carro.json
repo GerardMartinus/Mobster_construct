@@ -1,14 +1,14 @@
 {
 	"name": "Carro",
 	"plugin-id": "Sprite",
-	"sid": 557960519803067,
+	"sid": 158915155212981,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Sólido",
-			"sid": 669164443903887
+			"sid": 301265315653470
 		}
 	],
 	"effectTypes": [],
@@ -17,19 +17,39 @@
 			{
 				"frames": [
 					{
-						"width": 64,
+						"width": 32,
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9998058,
+						"imageSpriteId": 3412682,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0,
+								0.6875,
+								0.28125,
+								0.6875,
+								0.5,
+								0.75,
+								0.75,
+								0.5,
+								0.9375,
+								0.21875,
+								0.75,
+								0.28125,
+								0.5
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 820618235402904,
+				"sid": 618746427888293,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

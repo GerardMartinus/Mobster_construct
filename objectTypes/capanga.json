@@ -17,18 +17,7 @@
 			"sid": 836600795383706
 		}
 	],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Bullet",
-			"name": "Projétil",
-			"sid": 313419608325143
-		},
-		{
-			"behaviorId": "LOS",
-			"name": "CampoDeVisão",
-			"sid": 738071468822956
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [

@@ -6,9 +6,14 @@
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "EightDir",
-			"name": "8Direções",
-			"sid": 787544957756591
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 920156295739376
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "CampoDeVisão",
+			"sid": 831298975995952
 		}
 	],
 	"effectTypes": [],
