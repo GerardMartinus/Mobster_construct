@@ -431,7 +431,7 @@
 					},
 					"uid": 9,
 					"instanceVariables": {
-						"qtdeMunicao": 0,
+						"qtdeMunicao": 50,
 						"isAtirando": true,
 						"isVivo": true
 					},
@@ -488,6 +488,88 @@
 					"world": {
 						"x": 313.0639511681171,
 						"y": 218.07554835299612,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Boss",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "armado",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"instanceVariables": {
+						"qtdeMunicao": 50,
+						"isAtirando": true,
+						"isVivo": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 527.3759155273438,
+						"y": 238.4862518310547,
+						"width": 32,
+						"height": 32,
+						"originX": 0.48388396454472204,
+						"originY": 0.5245098039215685,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BossCollision",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 13,
+					"instanceVariables": {},
+					"behaviors": {
+						"Projétil": {
+							"properties": {
+								"speed": 0,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"CampoDeVisão": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 300,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						}
+					},
+					"world": {
+						"x": 521.8807373046875,
+						"y": 234.5611114501953,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
