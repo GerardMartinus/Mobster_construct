@@ -22,6 +22,10 @@
 			"sid": 183993579913348
 		},
 		{
+			"eventType": "comment",
+			"text": "Ao criar"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -71,541 +75,16 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-moving",
-					"objectClass": "PlayerCollision",
-					"sid": 657489614008203,
-					"behaviorType": "8Direções"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "Player",
-					"sid": 683572869341265,
-					"parameters": {
-						"angle": "anglelerp(Self.Angle , PlayerCollision.8Direções.MovingAngle, 0.5 * 90 * dt)"
-					}
-				}
-			],
-			"sid": 538006826116244
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-destroyed",
-					"objectClass": "Player",
-					"sid": 678020490361793
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Boss",
-					"sid": 997603681563958,
-					"parameters": {
-						"instance-variable": "isAtirando",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Capanga",
-					"sid": 330412690614216,
-					"parameters": {
-						"instance-variable": "isAtirando",
-						"value": "false"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 599345394463845,
-					"parameters": {
-						"seconds": "5"
-					}
-				},
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 100481774072076
-				},
-				{
-					"id": "reset-global-variables",
-					"objectClass": "System",
-					"sid": 371517529128179
-				}
-			],
-			"sid": 164006819097565
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "key-is-down",
-					"objectClass": "Teclado",
-					"sid": 372583995346145,
-					"parameters": {
-						"key": 32
-					}
-				},
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 170985764375659,
-					"parameters": {
-						"interval-seconds": "0.2"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Player",
-					"sid": 439301720366856,
-					"parameters": {
-						"instance-variable": "isVivo"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Player",
-					"sid": 987672432176745,
-					"parameters": {
-						"animation": "\"atirando\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "Player",
-					"sid": 596308297345286,
-					"parameters": {
-						"object": "Bullet",
-						"layer": "0",
-						"image-point": "1",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "subtract-from-instvar",
-					"objectClass": "Player",
-					"sid": 800016307340663,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 978881998360118
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-released",
-					"objectClass": "Teclado",
-					"sid": 900154712211278,
-					"parameters": {
-						"key": 32
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Player",
-					"sid": 465588745088546,
-					"parameters": {
-						"instance-variable": "isVivo"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Player",
-					"sid": 850300485871817,
-					"parameters": {
-						"animation": "\"armado\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 773626192932154
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 248597361511008
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Player",
-					"sid": 273604222414456,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 532098127209889,
-					"parameters": {
-						"instance-variable": "isAtirando",
-						"value": "false"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 613981090115393,
-					"parameters": {
-						"seconds": "5"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Player",
-					"sid": 479443707645862,
-					"parameters": {
-						"instance-variable": "isAtirando",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Player",
-					"sid": 936000967709843,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"value": "50"
-					}
-				}
-			],
-			"sid": 661934730180255
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 244671790664218
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Boss",
-					"sid": 633854026056866,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Boss",
-					"sid": 286301784889544,
-					"parameters": {
-						"instance-variable": "isAtirando",
-						"value": "false"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 826332657897313,
-					"parameters": {
-						"seconds": "5"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Boss",
-					"sid": 186851049732431,
-					"parameters": {
-						"instance-variable": "isAtirando",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Boss",
-					"sid": 120880061960699,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"value": "50"
-					}
-				}
-			],
-			"sid": 792107491839210
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 947205363889742
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "Capanga",
-					"sid": 141896607556905,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Capanga",
-					"sid": 903262529161922,
-					"parameters": {
-						"instance-variable": "isAtirando",
-						"value": "false"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 212285716595127,
-					"parameters": {
-						"seconds": "3"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Capanga",
-					"sid": 522669594549725,
-					"parameters": {
-						"instance-variable": "isAtirando",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Capanga",
-					"sid": 621787631637739,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"value": "14"
-					}
-				}
-			],
-			"sid": 583962521342963
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 949456218396310,
-					"parameters": {
-						"interval-seconds": "0.1"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Boss",
-					"sid": 112237300294716,
-					"parameters": {
-						"instance-variable": "isAtirando"
-					}
-				},
-				{
-					"id": "has-los-to-object",
-					"objectClass": "BossCollision",
-					"sid": 111533541851084,
-					"behaviorType": "CampoDeVisão",
-					"parameters": {
-						"object": "Player",
-						"image-point": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Boss",
-					"sid": 758796094575853,
-					"parameters": {
-						"animation": "\"atirando\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "Boss",
-					"sid": 585145975037663,
-					"parameters": {
-						"object": "BulletEnemies",
-						"layer": "0",
-						"image-point": "1",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "subtract-from-instvar",
-					"objectClass": "Boss",
-					"sid": 965792726232770,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 886136963436504
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Boss",
-					"sid": 315173883598960,
-					"parameters": {
-						"instance-variable": "isAtirando"
-					},
-					"isInverted": true
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Boss",
-					"sid": 240137744911873,
-					"parameters": {
-						"instance-variable": "isVivo"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Boss",
-					"sid": 389889215111162,
-					"parameters": {
-						"animation": "\"armado\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 336097365129517
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 696721448546730,
-					"parameters": {
-						"interval-seconds": "0.3"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Capanga",
-					"sid": 700763367903730,
-					"parameters": {
-						"instance-variable": "isAtirando"
-					}
-				},
-				{
-					"id": "has-los-to-object",
-					"objectClass": "CapangaCollision",
-					"sid": 508170646101356,
-					"behaviorType": "CampoDeVisão",
-					"parameters": {
-						"object": "Player",
-						"image-point": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "spawn-another-object",
-					"objectClass": "Capanga",
-					"sid": 142965887480632,
-					"parameters": {
-						"object": "BulletEnemies",
-						"layer": "0",
-						"image-point": "1",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "subtract-from-instvar",
-					"objectClass": "Capanga",
-					"sid": 997698738243016,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "Capanga",
-					"sid": 179945114035511,
-					"parameters": {
-						"animation": "\"atirando\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 437099710440437
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Capanga",
-					"sid": 651873721397964,
-					"parameters": {
-						"instance-variable": "isAtirando"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Capanga",
-					"sid": 674635833798544,
-					"parameters": {
-						"animation": "\"armado\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 716468463241153
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-created",
 					"objectClass": "Boss",
-					"sid": 207431773231885
+					"sid": 736402470254274
 				}
 			],
 			"actions": [
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "Boss",
-					"sid": 787079693034730,
+					"sid": 572664233167678,
 					"parameters": {
 						"instance-variable": "isAtirando",
 						"value": "true"
@@ -614,7 +93,7 @@
 				{
 					"id": "set-position-to-another-object",
 					"objectClass": "Boss",
-					"sid": 270482797336606,
+					"sid": 668653548228101,
 					"parameters": {
 						"object": "BossCollision",
 						"image-point-optional": "0"
@@ -623,7 +102,7 @@
 				{
 					"id": "add-child",
 					"objectClass": "BossCollision",
-					"sid": 420136678431212,
+					"sid": 631345020089389,
 					"parameters": {
 						"child": "Boss",
 						"transform-x": true,
@@ -636,7 +115,7 @@
 					}
 				}
 			],
-			"sid": 626135687058099
+			"sid": 776905159577830
 		},
 		{
 			"eventType": "block",
@@ -644,23 +123,14 @@
 				{
 					"id": "on-created",
 					"objectClass": "Capanga",
-					"sid": 787709276707179
+					"sid": 378914127448932
 				}
 			],
 			"actions": [
 				{
-					"id": "set-speed",
-					"objectClass": "CapangaCollision",
-					"sid": 232052846258896,
-					"behaviorType": "Projétil",
-					"parameters": {
-						"speed": "100"
-					}
-				},
-				{
 					"id": "set-boolean-instvar",
 					"objectClass": "Capanga",
-					"sid": 653135004642558,
+					"sid": 634082863558020,
 					"parameters": {
 						"instance-variable": "isAtirando",
 						"value": "true"
@@ -669,7 +139,7 @@
 				{
 					"id": "set-position-to-another-object",
 					"objectClass": "Capanga",
-					"sid": 368498362743352,
+					"sid": 864102330214730,
 					"parameters": {
 						"object": "CapangaCollision",
 						"image-point-optional": "0"
@@ -678,7 +148,7 @@
 				{
 					"id": "add-child",
 					"objectClass": "CapangaCollision",
-					"sid": 623267105758217,
+					"sid": 542019513297576,
 					"parameters": {
 						"child": "Capanga",
 						"transform-x": true,
@@ -689,9 +159,323 @@
 						"transform-z-elevation": false,
 						"destroy-with-parent": true
 					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "CapangaCollision",
+					"sid": 491423398881503,
+					"behaviorType": "Projétil",
+					"parameters": {
+						"speed": "100"
+					}
 				}
 			],
-			"sid": 630063294116657
+			"sid": 849631110240381
+		},
+		{
+			"eventType": "comment",
+			"text": "Estão vivos"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 701873739716239,
+					"parameters": {
+						"instance-variable": "isVivo"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Capanga",
+					"sid": 612114052833346,
+					"parameters": {
+						"animation": "\"armado\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Boss",
+					"sid": 771340119039759,
+					"parameters": {
+						"animation": "\"armado\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-range",
+					"objectClass": "CapangaCollision",
+					"sid": 618234217646108,
+					"behaviorType": "CampoDeVisão",
+					"parameters": {
+						"range": "0"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Boss",
+					"sid": 551386780693482,
+					"parameters": {
+						"instance-variable": "isAtirando",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Capanga",
+					"sid": 560367088520648,
+					"parameters": {
+						"instance-variable": "isAtirando",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Capanga",
+					"sid": 669632290343160,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "CapangaCollision",
+					"sid": 752369817041745,
+					"behaviorType": "Projétil",
+					"parameters": {
+						"angle": "angle(CapangaCollision.X, CapangaCollision.Y, 0, 0)"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 841620566701467,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 879442929285561
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 692363767582933
+				}
+			],
+			"sid": 938656656011202
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 932067876780050,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 464469357715447,
+					"parameters": {
+						"interval-seconds": "0.2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 741961329651027,
+					"parameters": {
+						"instance-variable": "isVivo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 295832547670709,
+					"parameters": {
+						"animation": "\"atirando\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 883281937543171,
+					"parameters": {
+						"object": "Bullet",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 515838577637880,
+					"parameters": {
+						"instance-variable": "qtdeMunicao",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 915731984868052
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "Teclado",
+					"sid": 923019818507979,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 779040194429153,
+					"parameters": {
+						"instance-variable": "isVivo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 222596370373002,
+					"parameters": {
+						"animation": "\"armado\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 952799582390545
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Boss",
+					"sid": 440987421716753,
+					"parameters": {
+						"instance-variable": "isAtirando"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Boss",
+					"sid": 772054696927700,
+					"parameters": {
+						"instance-variable": "isVivo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Boss",
+					"sid": 260914875598883,
+					"parameters": {
+						"animation": "\"armado\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 583626283848560
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bullet",
+					"sid": 945343827107267,
+					"parameters": {
+						"object": "Capanga"
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 708502611282583
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Capanga",
+					"sid": 513014797583322,
+					"parameters": {
+						"instance-variable": "isVivo",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Capanga",
+					"sid": 354500247462268,
+					"parameters": {
+						"instance-variable": "isAtirando",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Capanga",
+					"sid": 553986178301652,
+					"parameters": {
+						"instance-variable": "qtdeMunicao",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-range",
+					"objectClass": "CapangaCollision",
+					"sid": 698957377238801,
+					"behaviorType": "CampoDeVisão",
+					"parameters": {
+						"range": "0"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "CapangaCollision",
+					"sid": 421459730393307,
+					"behaviorType": "Projétil",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Bullet",
+					"sid": 214523020207774
+				}
+			],
+			"sid": 214670022549269
+		},
+		{
+			"eventType": "comment",
+			"text": "A cada tick"
 		},
 		{
 			"eventType": "block",
@@ -699,14 +483,22 @@
 				{
 					"id": "every-tick",
 					"objectClass": "System",
-					"sid": 136994873775071
+					"sid": 298764212016861
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 823386099776791,
+					"parameters": {
+						"instance-variable": "isVivo"
+					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-angle-toward-position",
 					"objectClass": "Capanga",
-					"sid": 898998494689507,
+					"sid": 670561717771881,
 					"parameters": {
 						"x": "Player.X",
 						"y": "Player.Y"
@@ -715,7 +507,7 @@
 				{
 					"id": "set-angle-toward-position",
 					"objectClass": "Boss",
-					"sid": 398735831627054,
+					"sid": 424436566878461,
 					"parameters": {
 						"x": "Player.X",
 						"y": "Player.Y"
@@ -724,49 +516,14 @@
 				{
 					"id": "set-angle-of-motion",
 					"objectClass": "CapangaCollision",
-					"sid": 109498079844028,
+					"sid": 645713933418220,
 					"behaviorType": "Projétil",
 					"parameters": {
 						"angle": "angle(CapangaCollision.X, CapangaCollision.Y, Player.X, Player.Y)"
 					}
 				}
 			],
-			"sid": 410309532118073
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Bullet",
-					"sid": 396236627838017,
-					"parameters": {
-						"object": "Boss"
-					}
-				},
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 546810336442908
-				}
-			],
-			"actions": [
-				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 915580843166275,
-					"parameters": {
-						"variable": "vidaElFuerte",
-						"value": "10"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Bullet",
-					"sid": 141789405595889
-				}
-			],
-			"sid": 299061974055050
+			"sid": 133426152650772
 		},
 		{
 			"eventType": "block",
@@ -774,7 +531,7 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 341880594332049,
+					"sid": 727944149018991,
 					"parameters": {
 						"variable": "vidaElFuerte",
 						"comparison": 0,
@@ -784,14 +541,14 @@
 				{
 					"id": "every-tick",
 					"objectClass": "System",
-					"sid": 932277557135361
+					"sid": 216823520010831
 				}
 			],
 			"actions": [
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "Boss",
-					"sid": 859804003699065,
+					"sid": 562086860896877,
 					"parameters": {
 						"instance-variable": "isAtirando",
 						"value": "false"
@@ -800,7 +557,7 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "Boss",
-					"sid": 354693794694435,
+					"sid": 210081357978862,
 					"parameters": {
 						"instance-variable": "qtdeMunicao",
 						"value": "0"
@@ -809,54 +566,38 @@
 				{
 					"id": "set-range",
 					"objectClass": "BossCollision",
-					"sid": 290201251785728,
+					"sid": 271357597712944,
 					"behaviorType": "CampoDeVisão",
 					"parameters": {
 						"range": "0"
 					}
-				}
-			],
-			"sid": 772126914158150
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "BulletEnemies",
-					"sid": 170488664325296,
-					"parameters": {
-						"object": "Player"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 729962470864862,
-					"parameters": {
-						"variable": "vidaTony",
-						"value": "10"
-					}
 				},
 				{
-					"id": "destroy",
-					"objectClass": "BulletEnemies",
-					"sid": 313999596431448
+					"id": "set-boolean-instvar",
+					"objectClass": "Boss",
+					"sid": 375969316703894,
+					"parameters": {
+						"instance-variable": "isVivo",
+						"value": "false"
+					}
 				}
 			],
-			"sid": 477368460422327
+			"sid": 654118807345039
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-eventvar",
+					"id": "every-tick",
 					"objectClass": "System",
-					"sid": 522418845610558,
+					"sid": 700825725703975
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Player",
+					"sid": 405176258903700,
 					"parameters": {
-						"variable": "vidaTony",
+						"instance-variable": "qtdeMunicao",
 						"comparison": 0,
 						"value": "0"
 					}
@@ -864,47 +605,158 @@
 			],
 			"actions": [
 				{
-					"id": "set-animation",
+					"id": "set-boolean-instvar",
 					"objectClass": "Player",
-					"sid": 765531381543205,
+					"sid": 477964781312565,
 					"parameters": {
-						"animation": "\"morto\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "PlayerCollision",
-					"sid": 115082317783694,
-					"behaviorType": "8Direções",
-					"parameters": {
-						"state": "disabled"
+						"instance-variable": "isAtirando",
+						"value": "false"
 					}
 				},
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 280120993973991,
+					"sid": 470524842464000,
 					"parameters": {
 						"seconds": "5"
 					}
 				},
 				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 592507358106777
-				},
-				{
 					"id": "set-boolean-instvar",
 					"objectClass": "Player",
-					"sid": 303196404048093,
+					"sid": 713664427530312,
 					"parameters": {
-						"instance-variable": "isVivo",
-						"value": "false"
+						"instance-variable": "isAtirando",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Player",
+					"sid": 823814242652569,
+					"parameters": {
+						"instance-variable": "qtdeMunicao",
+						"value": "50"
 					}
 				}
 			],
-			"sid": 197951194324635
+			"sid": 600681508136730
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 123707502284634
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Boss",
+					"sid": 907285330525666,
+					"parameters": {
+						"instance-variable": "qtdeMunicao",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Boss",
+					"sid": 198809102523339,
+					"parameters": {
+						"instance-variable": "isAtirando",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 717236187746912,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Boss",
+					"sid": 749411034329864,
+					"parameters": {
+						"instance-variable": "isAtirando",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Boss",
+					"sid": 465606190328769,
+					"parameters": {
+						"instance-variable": "qtdeMunicao",
+						"value": "50"
+					}
+				}
+			],
+			"sid": 102394882317090
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 114240630135230
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Capanga",
+					"sid": 637672666393726,
+					"parameters": {
+						"instance-variable": "qtdeMunicao",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Capanga",
+					"sid": 226003848374117,
+					"parameters": {
+						"instance-variable": "isAtirando",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 737894603513771,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Capanga",
+					"sid": 266383829011143,
+					"parameters": {
+						"instance-variable": "isAtirando",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Capanga",
+					"sid": 708380973571865,
+					"parameters": {
+						"instance-variable": "qtdeMunicao",
+						"value": "14"
+					}
+				}
+			],
+			"sid": 140876577419748
 		},
 		{
 			"eventType": "block",
@@ -912,70 +764,38 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Bullet",
-					"sid": 333759267474724,
+					"sid": 238219346744072,
 					"parameters": {
-						"object": "Capanga"
+						"object": "Boss"
 					}
 				},
 				{
 					"id": "every-tick",
 					"objectClass": "System",
-					"sid": 821766763601366
+					"sid": 751204442026693
 				}
 			],
 			"actions": [
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Capanga",
-					"sid": 349319047341297,
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 224455020059664,
 					"parameters": {
-						"instance-variable": "isAtirando",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "Capanga",
-					"sid": 621170842252982,
-					"parameters": {
-						"instance-variable": "qtdeMunicao",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-range",
-					"objectClass": "CapangaCollision",
-					"sid": 609416638719073,
-					"behaviorType": "CampoDeVisão",
-					"parameters": {
-						"range": "0"
-					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "CapangaCollision",
-					"sid": 434933959053209,
-					"behaviorType": "Projétil",
-					"parameters": {
-						"state": "disabled"
+						"variable": "vidaElFuerte",
+						"value": "10"
 					}
 				},
 				{
 					"id": "destroy",
 					"objectClass": "Bullet",
-					"sid": 561541275968720
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Capanga",
-					"sid": 866687082302074,
-					"parameters": {
-						"instance-variable": "isVivo",
-						"value": "false"
-					}
+					"sid": 525611094529576
 				}
 			],
-			"sid": 641726506840301
+			"sid": 654707023191360
+		},
+		{
+			"eventType": "comment",
+			"text": "Colisões com sólidos"
 		},
 		{
 			"eventType": "block",
@@ -1066,52 +886,10 @@
 			"conditions": [
 				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Capanga",
-					"sid": 979035106957536,
+					"objectClass": "Boss",
+					"sid": 443454023521014,
 					"parameters": {
 						"instance-variable": "isVivo"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Capanga",
-					"sid": 596416571434621,
-					"parameters": {
-						"animation": "\"morto\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "set-angle",
-					"objectClass": "Capanga",
-					"sid": 665208087996160,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-collisions-enabled",
-					"objectClass": "Capanga",
-					"sid": 878815029423068,
-					"parameters": {
-						"collisions": "disabled"
-					}
-				}
-			],
-			"sid": 469244465915667
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Boss",
-					"sid": 516215148828051,
-					"parameters": {
-						"instance-variable": "isAtirando"
 					},
 					"isInverted": true
 				}
@@ -1144,6 +922,293 @@
 				}
 			],
 			"sid": 855370424535033
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Capanga",
+					"sid": 987319548614876,
+					"parameters": {
+						"instance-variable": "isVivo"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Capanga",
+					"sid": 704670008167896,
+					"parameters": {
+						"animation": "\"morto\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Capanga",
+					"sid": 956056421202040,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "Capanga",
+					"sid": 597170489637306,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 856285863891729,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Capanga",
+					"sid": 165762122171548
+				},
+				{
+					"id": "destroy",
+					"objectClass": "CapangaCollision",
+					"sid": 893192573426453
+				}
+			],
+			"sid": 603413561030322
+		},
+		{
+			"eventType": "comment",
+			"text": "Outros"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "PlayerCollision",
+					"sid": 658960484321689,
+					"behaviorType": "8Direções"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Player",
+					"sid": 985904318318036,
+					"parameters": {
+						"angle": "anglelerp(Self.Angle , PlayerCollision.8Direções.MovingAngle, 0.5 * 90 * dt)"
+					}
+				}
+			],
+			"sid": 955771766273950
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 505167442640432,
+					"parameters": {
+						"interval-seconds": "0.1"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Boss",
+					"sid": 295159177016814,
+					"parameters": {
+						"instance-variable": "isAtirando"
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "BossCollision",
+					"sid": 657379889820068,
+					"behaviorType": "CampoDeVisão",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Boss",
+					"sid": 794278233845689,
+					"parameters": {
+						"object": "BulletEnemies",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Boss",
+					"sid": 421841897722656,
+					"parameters": {
+						"instance-variable": "qtdeMunicao",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Boss",
+					"sid": 835927849928093,
+					"parameters": {
+						"animation": "\"atirando\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 808859080976732
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 303238901303235,
+					"parameters": {
+						"interval-seconds": "0.3"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Capanga",
+					"sid": 695861289193157,
+					"parameters": {
+						"instance-variable": "isAtirando"
+					}
+				},
+				{
+					"id": "has-los-to-object",
+					"objectClass": "CapangaCollision",
+					"sid": 257585286340683,
+					"behaviorType": "CampoDeVisão",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Capanga",
+					"sid": 745659400624049,
+					"parameters": {
+						"object": "BulletEnemies",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Capanga",
+					"sid": 727556222493818,
+					"parameters": {
+						"instance-variable": "qtdeMunicao",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Capanga",
+					"sid": 198034265773664,
+					"parameters": {
+						"animation": "\"atirando\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 274057928173227
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletEnemies",
+					"sid": 587360425387699,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 172185085191893,
+					"parameters": {
+						"variable": "vidaTony",
+						"value": "10"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BulletEnemies",
+					"sid": 679808389686517
+				}
+			],
+			"sid": 469187147867890
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 514900036371478,
+					"parameters": {
+						"variable": "vidaTony",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Player",
+					"sid": 478289523328176,
+					"parameters": {
+						"instance-variable": "isVivo",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 669139693699943,
+					"parameters": {
+						"animation": "\"morto\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerCollision",
+					"sid": 645984174897962,
+					"behaviorType": "8Direções",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 479460366794428
 		}
 	],
 	"sid": 472897102420202

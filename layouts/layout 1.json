@@ -40,86 +40,6 @@
 					}
 				},
 				{
-					"type": "PlayerCollision",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3,
-					"instanceVariables": {},
-					"behaviors": {
-						"8Direções": {
-							"properties": {
-								"max-speed": 200,
-								"acceleration": 200,
-								"deceleration": 400,
-								"directions": "dir-8",
-								"set-angle": "smooth",
-								"allow-sliding": false,
-								"default-controls": true,
-								"enabled": true
-							}
-						},
-						"CentrarEm": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 758,
-						"y": 195,
-						"width": 32,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Player",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "armado",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 5,
-					"instanceVariables": {
-						"qtdeMunicao": 50,
-						"isAtirando": true,
-						"isVivo": true
-					},
-					"behaviors": {},
-					"world": {
-						"x": 754,
-						"y": 196,
-						"width": 32,
-						"height": 32,
-						"originX": 0.3801369863013699,
-						"originY": 0.3901098901098901,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Bullet",
 					"properties": {
 						"initially-visible": true,
@@ -339,7 +259,7 @@
 					}
 				},
 				{
-					"type": "Boss",
+					"type": "Player",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "armado",
@@ -347,7 +267,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 9,
+					"uid": 3,
 					"instanceVariables": {
 						"qtdeMunicao": 50,
 						"isAtirando": true,
@@ -355,12 +275,12 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 390.780765959682,
-						"y": 307.56841683835245,
+						"x": 753.4623413085938,
+						"y": 232.20603942871094,
 						"width": 32,
 						"height": 32,
-						"originX": 0.48388396454472204,
-						"originY": 0.5245098039215685,
+						"originX": 0.3801369863013699,
+						"originY": 0.3901098901098901,
 						"color": [
 							1,
 							1,
@@ -372,7 +292,7 @@
 					}
 				},
 				{
-					"type": "CapangaCollision",
+					"type": "PlayerCollision",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -380,32 +300,30 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 7,
+					"uid": 5,
 					"instanceVariables": {},
 					"behaviors": {
-						"Projétil": {
+						"8Direções": {
 							"properties": {
-								"speed": 0,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": true,
-								"set-angle": false,
-								"step": false,
+								"max-speed": 200,
+								"acceleration": 200,
+								"deceleration": 400,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
 								"enabled": true
 							}
 						},
-						"CampoDeVisão": {
+						"CentrarEm": {
 							"properties": {
-								"obstacles": "solids",
-								"range": 300,
-								"cone-of-view": 360,
-								"use-collision-cells": true
+								"enabled": true
 							}
 						}
 					},
 					"world": {
-						"x": 532.8709106445312,
-						"y": 199.2349090576172,
+						"x": 754.2474028395468,
+						"y": 234.5611151216993,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -421,7 +339,7 @@
 					}
 				},
 				{
-					"type": "Capanga",
+					"type": "Boss",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "armado",
@@ -429,19 +347,19 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 8,
+					"uid": 7,
 					"instanceVariables": {
-						"qtdeMunicao": 14,
+						"qtdeMunicao": 50,
 						"isAtirando": true,
 						"isVivo": true
 					},
 					"behaviors": {},
 					"world": {
-						"x": 540.7212208458634,
-						"y": 196.094811277418,
-						"width": 34,
-						"height": 34,
-						"originX": 0.686371578334304,
+						"x": 121.51599586070603,
+						"y": 252.61675398886314,
+						"width": 32,
+						"height": 32,
+						"originX": 0.48388396454472204,
 						"originY": 0.5245098039215685,
 						"color": [
 							1,
@@ -462,7 +380,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 10,
+					"uid": 8,
 					"instanceVariables": {},
 					"behaviors": {
 						"Projétil": {
@@ -486,8 +404,90 @@
 						}
 					},
 					"world": {
-						"x": 387.64114063251566,
-						"y": 305.2135314941406,
+						"x": 117.59205627441406,
+						"y": 250.26165771484375,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Capanga",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "armado",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"instanceVariables": {
+						"qtdeMunicao": 0,
+						"isAtirando": true,
+						"isVivo": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 322.4842529296875,
+						"y": 218.86058044433594,
+						"width": 34,
+						"height": 34,
+						"originX": 0.686371578334304,
+						"originY": 0.5245098039215685,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CapangaCollision",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 10,
+					"instanceVariables": {},
+					"behaviors": {
+						"Projétil": {
+							"properties": {
+								"speed": 0,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": true,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"CampoDeVisão": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 300,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						}
+					},
+					"world": {
+						"x": 313.0639511681171,
+						"y": 218.07554835299612,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
