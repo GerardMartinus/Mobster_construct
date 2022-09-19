@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Mosaico",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direções",
@@ -69,6 +77,14 @@
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Âncora",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "no3dm2f1mzm",
@@ -88,7 +104,11 @@
 			"Sprite3",
 			"Carro",
 			"Sprite5",
-			"Teclado"
+			"Teclado",
+			"Mosaico",
+			"PlanoDeFundoEmBlocos2",
+			"Sprite4",
+			"barraDeVida"
 		],
 		"subfolders": []
 	},

@@ -1161,6 +1161,14 @@
 					"id": "destroy",
 					"objectClass": "BulletEnemies",
 					"sid": 679808389686517
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "barraDeVida",
+					"sid": 196830167695459,
+					"parameters": {
+						"frame-number": "barraDeVida.AnimationFrame + 1"
+					}
 				}
 			],
 			"sid": 469187147867890
@@ -1209,6 +1217,12 @@
 				}
 			],
 			"sid": 479460366794428
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 945713748954484
 		}
 	],
 	"sid": 472897102420202
